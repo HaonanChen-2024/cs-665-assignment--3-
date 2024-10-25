@@ -7,23 +7,26 @@
 | Assignment # |                            |
 
 # Assignment Overview
-Please add a paragraph or two overviewing the objectives of the assignment.
+The main goal of this assignment is to develop an email generation application based on design patterns. The application is designed to generate personalized email content for different types of customers to meet the needs of enterprises for customized communication. By creating an abstract Customer class and concrete subclasses (such as BusinessCustomer, VIPCustomer, etc.), the application is able to generate specific email content based on the customer type. At the same time, the factory pattern is applied to create different customer objects, which simplifies the object generation process and improves the scalability of the code.
+
+In addition, this assignment also emphasizes the importance of object-oriented design and exception handling. During the implementation process, an email format validation mechanism is added to ensure that all email addresses are in a valid format. The test covers the email generation logic for all customer types and simulates the email sending process to ensure the reliability and stability of the system. Through this assignment, students can deeply understand how to apply design patterns in software development and solve real business needs in an object-oriented way.
 
 # GitHub Repository Link:
-https://github.com/{YOUR_USERNAME}/cs-665-assignment-{ASSIGNMENT_NUMBER}
+https://github.com/HaonanChen-2024/cs-665-assignment--3-
 
 # Implementation Description 
 
+## Flexibility and Extensibility
+The application is designed with a high degree of flexibility, allowing new customer types to be added with minimal code changes. By leveraging an abstract Customer class, the application enables easy addition of new customer types through inheritance. Each customer type only needs to implement the generateEmail() method to provide a unique, personalized email. To introduce a new customer type, developers can create a subclass extending Customer and implement the generateEmail() method without modifying the existing classes. The CustomerFactory class further supports this extensibility by using a factory pattern that enables centralized control over object creation. This ensures that new customer types can be seamlessly integrated into the system.
 
-For each assignment, please answer the following:
+## Simplicity and Maintainability
+This implementation prioritizes simplicity and clarity. By using an organized directory structure and separating each customer type into its own class, the code remains modular and easy to read. The CustomerFactory class centralizes the object creation process, reducing complexity and keeping instantiation code separate from business logic. The use of a StringConstants class to store all static strings, such as email bodies and greetings, keeps content organized and simplifies future updates. Additionally, meaningful class and method names make the code intuitive and accessible to other developers who may need to maintain or extend the application.
 
-- Explain the level of flexibility in your implementation, including how new object types can
-be easily added or removed in the future.
-- Discuss the simplicity and understandability of your implementation, ensuring that it is
-easy for others to read and maintain.
-- Describe how you have avoided duplicated code and why it is important.
-- If applicable, mention any design patterns you have used and explain why they were
-chosen.
+## Avoiding Code Duplication
+To avoid code duplication, common functionality, such as email validation, is encapsulated in the Customer abstract class. Each specific customer type only implements unique aspects of their behavior (i.e., generateEmail()), while shared functionality remains in the superclass. Centralizing string content in StringConstants ensures that email content is not repeated across different classes, further reducing redundancy and enhancing maintainability. Avoiding duplicated code minimizes potential errors and makes the codebase more efficient, easier to test, and simpler to extend.
+
+## Design Patterns Used
+This implementation primarily utilizes the Factory and Template design patterns. The Factory Pattern is applied through the CustomerFactory class, which enables the creation of specific customer objects based on a given type. This pattern was chosen because it supports object-oriented principles by abstracting the instantiation process, thus making the code flexible and open to extension. The Template Pattern is demonstrated through the Customer abstract class, which defines a common template that all customer types follow while allowing subclasses to implement unique email content. These design patterns were selected to enhance code reusability, maintainability, and scalability, ensuring the application is adaptable to future requirements.
 
 
 # Maven Commands
