@@ -1,10 +1,10 @@
 
 | CS-665       | Software Design & Patterns |
 |--------------|----------------------------|
-| Name         | FIRST_NAME LAST_NAME       |
-| Date         | MM/DD/YYYY                 |
-| Course       | Fall / Spring / Summer     |
-| Assignment # |                            |
+| Name         | Haonan Chen                |
+| Date         | 10/25/2024                 |
+| Course       | Fall                       |
+| Assignment # | 3                          |
 
 # Assignment Overview
 The main goal of this assignment is to develop an email generation application based on design patterns. The application is designed to generate personalized email content for different types of customers to meet the needs of enterprises for customized communication. By creating an abstract Customer class and concrete subclasses (such as BusinessCustomer, VIPCustomer, etc.), the application is able to generate specific email content based on the customer type. At the same time, the factory pattern is applied to create different customer objects, which simplifies the object generation process and improves the scalability of the code.
